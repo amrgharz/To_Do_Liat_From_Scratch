@@ -40,7 +40,8 @@ class Cont extends React.Component {
         <input value={this.state.term} onChange={this.onChange}/>
         <button>Submit</button>
       </form>
-      {this.state.items.map(item => <h5> <input type="checkbox"/>  {item}</h5>)}
+      {this.state.items.map(item => <h5> <input type="checkbox"/>
+        {item} <button>edit</button> <button onClick={this.handleDelete}>delete</button></h5>)}
       </div>
     );
   }
@@ -49,9 +50,9 @@ const App = () => (
   <div style={styles}>
      <h2>My Basic To Do List</h2>
      <Cont />
-     <Input text="Make an ok buttion"/><br/>
      <Input text="Make the ok add a task
-       and clear the input"/><br/>
+       and clear the input"/><br />
+     <Input text="Make an ok buttion"/><br />
      <Input text="Make the task clickable"/><br/>
      <Input  text="Create a github repo
      of my to do list"/><br />
